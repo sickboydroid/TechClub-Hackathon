@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>QR Scanner</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="title">CampusPass <span class="status">Entry</span></div>
+      <div class="container">
+        <div id="message"></div>
+        <div class="scanner-container">
+          <video id="qr-video"></video>
+        </div>
+        <div class="purpose">
+          <input
+            type="text"
+            id="purpose"
+            placeholder="Purpose..."
+            autocomplete="off"
+            maxlength="500"
+            value="Market"
+          />
+        </div>
+      </div>
+
+      <!-- Overlay -->
+      <div id="overlay">
+        <div class="overlay-content">
+          <div class="checkmark"></div>
+          <div class="overlay-text">
+            Attendence for <span class="status">entry</span> marked
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
