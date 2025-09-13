@@ -1,0 +1,6 @@
+- after 2 hours
+- readme.md about
+- liberty on themes
+- not static
+- should solve a real world problem
+- user experience core concept, functionality
