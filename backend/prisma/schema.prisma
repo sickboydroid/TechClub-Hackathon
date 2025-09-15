@@ -1,0 +1,32 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+// If person left yesterday and never scanned back qr and tried to leave campus again next day, inform admin
+
+model User {
+    id          String   @id @unique @default(uuid())
+    enrollment  String   @unique
+    name        String
+    password    String
+    email       String?  @unique
+    phone       String?  @unique
+    gender      String?
+    user_status Int      @default(0)
+    batch       String?
+    logs        Status[]
+}
+
+model Status {
+    id      String    @id @unique @default(uuid())
+    timeIn  DateTime  @default(now())
+    timeOut DateTime?
+    purpose String?
+    user    User      @relation(fields: [userId], references: [id])
+    userId  String
+}
