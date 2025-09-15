@@ -1,0 +1,5 @@
+.env
+node_modules
+db.zip
+package-lock.json
+yarn.lock
